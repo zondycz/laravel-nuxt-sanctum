@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,700&display=swap&subset=latin-ext');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
