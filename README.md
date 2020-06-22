@@ -2,8 +2,8 @@
 
  Nuxt.js application which will demo the authentication flow using Laravel sanctum. 
  
-![zondycz Logo](https://i.ibb.co/vm0bGmK/screen1.png)
-
+![zondycz login](https://i.ibb.co/vm0bGmK/screen1.png)
+![zondycz dashboard](https://i.ibb.co/sQVjRJZ/my-app.png)
 
  ## Laravel .env 
  ```
