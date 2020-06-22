@@ -35,7 +35,7 @@
             async logout () {
                 this.$auth.logout('laravelSanctum', { data: this.form })
                 .then(response => {
-
+                    this.$router.push(`/login`)
                 })
                 .catch(({response}) => {
                     this.errors = response.data.errors

@@ -66,7 +66,7 @@ export default {
 	*/
 	axios: {
 		baseUrl: process.env.API_URL,
-		credentials: true
+		credentials: true,
 	},
 
 	auth: {
@@ -83,7 +83,7 @@ export default {
 		},
 		redirect: {
 			login: '/login',
-			logout: '/',
+			logout: '/login',
 			callback: '/login',
 			home: '/'
 		}

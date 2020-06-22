@@ -13,7 +13,7 @@
         </div>
         <form @submit.prevent="submit" class="mt-8" action="#" method="POST">
         <input type="hidden" name="remember" value="true" />
-        <div class="rounded-md shadow-sm">
+        <div>
             <div class="mb-3">
                 <input aria-label="Email address" name="email" type="email" v-model="form.email" class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10 sm:text-sm sm:leading-5" placeholder="Email address" />
                 <div v-if="errors.email" class="text-red-400 text-xs mb-4 mt-2">{{ errors.email[0] }}</div>
@@ -76,7 +76,7 @@ import Logo from '~/components/Logo'
             async submit () {
                 this.$auth.loginWith('laravelSanctum', { data: this.form })
                 .then(response => {
-
+                    this.$router.push(`/`)
                 })
                 .catch(({response}) => {
                     this.errors = response.data.errors
