@@ -8,12 +8,15 @@
 
         <div v-if="isOpen" class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg">
             <div class="py-1 rounded-md bg-white shadow-xs" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your Profile
-            </a>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings
-            </a>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign out
-            </a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+                    Your Profile
+                </a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+                    Settings
+                </a>
+                <a href="#" @click="logout" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+                    Sign out
+                </a>
             </div>
         </div>
     </div>
@@ -23,7 +26,21 @@
     export default {
         data() {
             return {
-                isOpen: false
+                isOpen: false,
+                errors: {}
+            }
+        },
+
+        methods: {
+            async logout () {
+                this.$auth.logout('laravelSanctum', { data: this.form })
+                .then(response => {
+
+                })
+                .catch(({response}) => {
+                    this.errors = response.data.errors
+                })
+
             }
         },
     }
