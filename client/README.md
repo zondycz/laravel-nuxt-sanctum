@@ -1,4 +1,4 @@
-# Plutio
+# NUXT CLIENT
 
 > My remarkable Nuxt.js project
 
