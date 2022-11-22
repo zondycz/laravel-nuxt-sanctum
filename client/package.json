@@ -15,7 +15,7 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.15.8"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^2.0.0",
